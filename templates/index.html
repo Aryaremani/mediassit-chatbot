@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediAssist Chatbot</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #chatbox {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      height: 400px;
+      overflow-y: auto;
+    }
+    .message {
+      margin: 10px 0;
+    }
+    .user {
+      text-align: right;
+      color: blue;
+    }
+    .bot {
+      text-align: left;
+      color: green;
+    }
+    #userInput {
+      width: calc(100% - 60px);
+      padding: 10px;
+      margin-right: 10px;
+    }
+    #sendButton {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>MediAssist Chatbot</h1>
+  <div id="chatbox">
+    <div id="messages"></div>
+  </div>
+  <div>
+    <input type="text" id="userInput" placeholder="Type your question..." />
+    <button id="sendButton" onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    async function sendMessage() {
+      const userInput = document.getElementById("userInput").value;
+      if (!userInput.trim()) return; // Prevent empty messages
+
+      const messagesDiv = document.getElementById("messages");
+      const userMessage = document.createElement("div");
+      userMessage.className = "message user";
+      userMessage.innerText = userInput;
+      messagesDiv.appendChild(userMessage);
+
+      document.getElementById("userInput").value = "";
+
+      try {
+        const response = await fetch("http://127.0.0.1:5000/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ message: userInput })
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch response from the server.");
+        }
+
+        const data = await response.json();
+
+        const botMessage = document.createElement("div");
+        botMessage.className = "message bot";
+        botMessage.innerText = data.reply;
+        messagesDiv.appendChild(botMessage);
+
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+      } catch (error) {
+        console.error("Error:", error);
+        const errorMessage = document.createElement("div");
+        errorMessage.className = "message bot";
+        errorMessage.innerText = "Error: Unable to connect to the server.";
+        messagesDiv.appendChild(errorMessage);
+      }
+    }
+
+    async function loadChatHistory() {
+      try {
+        const response = await fetch("http://127.0.0.1:5000/history");
+        if (!response.ok) {
+          throw new Error("Failed to fetch chat history.");
+        }
+        const data = await response.json();
+        const messagesDiv = document.getElementById("messages");
+
+        // Display chat history
+        data.history.forEach(([userMessage, botReply]) => {
+          const userDiv = document.createElement("div");
+          userDiv.className = "message user";
+          userDiv.innerText = userMessage;
+          messagesDiv.appendChild(userDiv);
+
+          const botDiv = document.createElement("div");
+          botDiv.className = "message bot";
+          botDiv.innerText = botReply;
+          messagesDiv.appendChild(botDiv);
+        });
+
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+      } catch (error) {
+        console.error("Error loading chat history:", error);
+      }
+    }
+
+    // Load chat history when the page loads
+    window.onload = loadChatHistory;
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+[
+  {
+    "question": "What is DoctorG in GrapesHMS?",
+    "answer": "DoctorG is an advanced healthcare application providing doctors with real-time access to patient health information."
+  },
+  {
+    "question": "Explain DoctorG.",
+    "answer": "DoctorG is an advanced healthcare application providing doctors with real-time access to patient health information."
+  },
+  {
+    "question": "Tell me about DoctorG.",
+    "answer": "DoctorG is an advanced healthcare application providing doctors with real-time access to patient health information."
+  },
+  {
+    "question": "How does DoctorG assist doctors in patient care?",
+    "answer": "DoctorG offers features like clinical notes, vitals monitoring, medication history, and diagnostic results, enabling doctors to make informed decisions and provide optimal care."
+  },
+  {
+    "question": "Can DoctorG handle both OP and IP management?",
+    "answer": "Yes, DoctorG supports both Outpatient (OP) and Inpatient (IP) management, allowing seamless handling of patient records across different departments."
+  },
+  {
+    "question": "Does DoctorG support voice-to-text functionality?",
+    "answer": "Absolutely, DoctorG includes a voice-to-text assistant, enabling doctors to dictate notes and prescriptions efficiently."
+  },
+  {
+    "question": "What kind of reports can DoctorG generate?",
+    "answer": "DoctorG can generate clinical notes, discharge summaries, prescriptions, and investigation reports, all accessible digitally."
+  },
+  {
+    "question": "How can I register as a patient at the hospital?",
+    "answer": "You can register via the front desk, mobile QR code, self-service kiosk, or through the hospital's website. Emergency and VIP registrations are also supported at bedside."
+  },
+  {
+    "question": "Is there an option for online registration during medical camps?",
+    "answer": "Yes, the system supports online and offline registration for medical camps, enabling outreach in rural and remote areas."
+  },
+  {
+    "question": "How does the OPD management system enhance patient experience?",
+    "answer": "The OPD module includes smart queue management, AI-based consultation time prediction, and 100% paperless patient flow using electronic records."
+  },
+  {
+    "question": "Can doctors access patient records remotely?",
+    "answer": "Yes, through the DoctorG app and Grapes platform, doctors can securely access patient records from mobile devices and tablets."
+  },
+  {
+    "question": "What is the pharmacy module capable of?",
+    "answer": "The pharmacy module supports automated billing, inventory management, chemical and brand name dispensing, and CPOE integration with voice support."
+  },
+  {
+    "question": "Does the pharmacy system handle inventory alerts?",
+    "answer": "Yes, it provides alerts for low stock levels, expiry dates, and supports automated reordering to maintain optimal inventory."
+  },
+  {
+    "question": "What billing options are available?",
+    "answer": "The system supports multiple window billing, brand or chemical name-based billing, multiple payment modes including wallet integration, and direct GST report generation."
+  },
+  {
+    "question": "Can the billing system handle insurance claims?",
+    "answer": "Yes, it integrates with the insurance module to process claims, manage approvals, and track reimbursements efficiently."
+  },
+  {
+    "question": "How are lab samples tracked?",
+    "answer": "Samples are tracked using bar-code generation for department-wise or specimen-wise combinations, with direct integration to equipment for Laboratory Information Systems (LIS)."
+  },
+  {
+    "question": "Does the lab module support automated result entry?",
+    "answer": "Yes, it interfaces with lab equipment to automatically capture and record test results, reducing manual entry errors."
+  },
+  {
+    "question": "What functionalities are available for nursing staff?",
+    "answer": "The nursing station is 100% paperless, supports bedside assistance online, automatic drug and vital charting, and includes inventory management."
+  },
+  {
+    "question": "Can nurses update patient vitals in real-time?",
+    "answer": "Yes, nurses can record and monitor patient vitals in real-time using handheld devices integrated with the system."
+  },
+  {
+    "question": "How does the system handle insurance claims?",
+    "answer": "It provides a single-window view for pending claims, received payments, and inpatient bill details, facilitating easy generation of essential certificates and corporate bills."
+  },
+  {
+    "question": "Does the system support multiple insurance providers?",
+    "answer": "Yes, it can manage policies and claims from various insurance providers, streamlining the reimbursement process."
+  },
+  {
+    "question": "Is there support for digitizing existing health records?",
+    "answer": "Yes, the system promotes 100% digital records with ICD integration and digitization through scanners and tagging, enhancing accuracy and transparency."
+  },
+  {
+    "question": "Can we retrieve patient records quickly?",
+    "answer": "Absolutely, the system allows for quick retrieval of patient records using various search parameters and filters."
+  }
+]
